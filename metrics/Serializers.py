@@ -37,9 +37,9 @@ class MetricSerialiser(DynamicFieldsModelSerializer, serializers.HyperlinkedMode
         if type(metric) == dict:
             if metric.get("clicks_sum"):
                 return metric.get("clicks_sum")
-        elif hasattr("metric", "clicks_sum"):
+        elif hasattr(metric, "clicks_sum"):
             return metric.clicks_sum
-        elif hasattr("metric", "clicks"):
+        elif hasattr(metric, "clicks"):
             return metric.clicks
         return ""
 
@@ -47,9 +47,9 @@ class MetricSerialiser(DynamicFieldsModelSerializer, serializers.HyperlinkedMode
         if type(metric) == dict:
             if metric.get("impressions_sum"):
                 return metric.get("impressions_sum")
-        elif hasattr("metric", "impressions_sum"):
+        elif hasattr(metric, "impressions_sum"):
             return metric.impressions_sum
-        elif hasattr("metric", "impressions"):
+        elif hasattr(metric, "impressions"):
             return metric.impressions
         return ""
 
@@ -57,9 +57,9 @@ class MetricSerialiser(DynamicFieldsModelSerializer, serializers.HyperlinkedMode
         if type(metric) == dict:
             if metric.get("revenue_sum"):
                 return metric.get("revenue_sum")
-        elif hasattr("metric", "revenue_sum"):
+        elif hasattr(metric, "revenue_sum"):
             return metric.revenue_sum
-        elif hasattr("metric", "revenue"):
+        elif hasattr(metric, "revenue"):
             return metric.revenue
         return ""
 
